@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CreatorDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_creator_details_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_details_creator_back"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_back_btn"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_arrow_left"
+                app:iconGravity="textStart"
+                app:iconSize="40dp"
+                app:iconTint="@color/blue" />
+
+            <TextView
+                android:id="@+id/tv_details_creator_title"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Creator name"
+                android:textSize="30sp" />
+
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                />
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_creator_details_top"
+            android:layout_marginTop="30dp"
+            android:numStars="5"
+            android:layout_centerHorizontal="true"
+            android:stepSize="0.1"
+            android:progressTint="#FFC107"
+            android:secondaryProgressTint="@android:color/transparent"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/event_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_bar"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </RelativeLayout>
+
+</ScrollView>

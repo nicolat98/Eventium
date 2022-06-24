@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EventDetailsFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_event_details_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_details_event_back"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_back_btn"
+            app:backgroundTint="@null"
+            app:icon="@drawable/ic_arrow_left"
+            app:iconGravity="textStart"
+            app:iconSize="40dp"
+            app:iconTint="@color/blue" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/tv_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="event name"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_details_creator"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_details_title"
+                android:gravity="center"
+                android:text="creator name"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/btn_fav_details_event"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:src="@drawable/ic_favorite_border"
+            android:scaleType="fitCenter"
+
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_event_details_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_image_details_event"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_details_event_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_details_typology"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/cv_image_details_event"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Tipologia"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_details_date_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_details_typology"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Date time"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_details_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_details_date_time"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Location"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_details_num_max"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_details_location"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="num / max"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_details_num_max"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Descrizione"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:layout_below="@id/tv_details_description"
+                >
+
+                <Button
+                    android:id="@+id/btn_contact"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Contact" />
+
+                <Button
+                    android:id="@+id/btn_partecipate"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_details_description"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/green"
+                    android:text="Partecipate" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

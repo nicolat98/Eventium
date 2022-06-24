@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "405429566333",
+    "project_id": "eventium-1b6b1",
+    "storage_bucket": "eventium-1b6b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405429566333:android:314112c294afba16782a14",
+        "android_client_info": {
+          "package_name": "com.example.eventium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405429566333-k36uali2s3aujrnd0ppq5tdkeaas9gte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtS4AE-yN0yUvKFJ31BepAfbnBnialFMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405429566333-k36uali2s3aujrnd0ppq5tdkeaas9gte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

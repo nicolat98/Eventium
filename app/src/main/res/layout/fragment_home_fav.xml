@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="nav_fragments.HomeFavFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_title_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_fav_home_2"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/ic_favorite"
+            android:scaleType="fitCenter"
+
+            />
+
+        <TextView
+            android:id="@+id/home_fragment_title"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:text="Favorite Events"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_search_fav"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/ic_search"
+            android:scaleType="fitCenter"
+            />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_title_event"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_order_by_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order by: "
+            android:textSize="20sp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group_search_fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_order_by_fav"
+            >
+
+            <RadioButton
+                android:id="@+id/radio_btn_order_name_fav"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:checked="true"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_btn_order_date_fav"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Date" />
+
+            <RadioButton
+                android:id="@+id/radio_btn_order_type_fav"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Type" />
+
+        </RadioGroup>
+
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/event_recycler_view_fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_search_fav"
+        android:layout_marginTop="20dp"
+        />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
